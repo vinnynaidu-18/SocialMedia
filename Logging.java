@@ -1,16 +1,19 @@
 public class Logging {
     public String userName;
     public String password;
+    public Long  mobileNo;
+    public String otp;
 
-
-    public Logging(String userName, String password) {
-        this.userName = userName;
-        this.password = password;
-
+    public Logging(long mobileNo, String otp) {
+        this.mobileNo = mobileNo;
+        this.otp = otp;
     }
 
-    boolean login(String userName, String password) {
-        return (this.userName.equals(userName) && this.password.equals(password));
+    boolean login(long mobileNo, String otp) {
+        return (this.mobileNo == mobileNo && this.otp.equals(otp));
 
     }
 }
+
+
+
